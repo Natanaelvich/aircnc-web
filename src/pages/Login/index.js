@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import PropType from 'prop-types';
@@ -11,7 +13,6 @@ import logo from '../../assets/logo.svg';
 
 function Login({ history }) {
   const [email, setEmail] = useState('');
-  const [user, setUser] = useState({});
 
   async function handlesubmit(e) {
     e.preventDefault();
@@ -21,13 +22,13 @@ function Login({ history }) {
         email,
       })
       .then(res => {
-        setUser(res.data);
+        localStorage.setItem('user', res.data._id);
         toast.success('cadastrado com sucesso');
+        history.push('/main');
       })
       .catch(err => {
         toast.error(`erro ao se cadastrar: ${err}`);
       });
-    history.push('/main', { user });
   }
   return (
     <Container>
