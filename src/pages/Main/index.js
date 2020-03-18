@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
+import Helmet from 'react-helmet';
 
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
@@ -10,7 +11,10 @@ import logo from '../../assets/logo.svg';
 import { Container, SpotList } from './styles';
 import { Button } from '../../styles/button';
 
-const logoEmpresa = 'https://blog.rocketseat.com.br/content/images/2019/05/Painel.png';
+const logoEmpresa =
+  'https://blog.rocketseat.com.br/content/images/2019/05/Painel.png';
+
+const Title = 'AirCnC Natanaelvich | Projeto feito na Semana Omnistack';
 
 export default function Main() {
   const [spots, setSpots] = useState([]);
@@ -28,6 +32,9 @@ export default function Main() {
   }, []);
   return (
     <Container>
+      <Helmet>
+        <title>{Title}</title>
+      </Helmet>
       <img src={logo} alt="" />
       <div>
         <SpotList>
