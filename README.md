@@ -1,6 +1,6 @@
-💻<h1 align='center'> AIRCNC WEB 🌇💻 </h1>
+<h1 align='center'> AIRCNC WEB 🌇💻 </h1>
 
-## PROJECT ROCKETSEAT SEMANA OMNISTACK 9 :rocket:  :fire:
+### PROJECT ROCKETSEAT SEMANA OMNISTACK 9 :rocket:  :fire:
 
 > check out https://aircnc-web-natanaelvich.herokuapp.com/
 
